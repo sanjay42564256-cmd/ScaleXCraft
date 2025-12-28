@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Start a Project - ScaleCraft</title>
+     <link rel="stylesheet" href="quest.css">
+</head>
+<body>
+ <div class="logo">ScaleCraft</div>
+    <section>
+      
+        <div class="container">
+            <h2>Start a Project</h2>
+            <p>Tell us about your business, and we’ll craft a strategy to scale it.</p>
+    
+            <form action="#" method="POST">
+                
+                <div class="form-section">
+                    <h3>1. Contact Information</h3>
+                    
+                    <label>Full Name:</label><br>
+                    <input type="text" name="fullname" placeholder="John Doe" required><br><br>
+    
+                    <label>Company Name:</label><br>
+                    <input type="text" name="company" placeholder="ScaleCraft Industries" required><br><br>
+    
+                    <label>Email Address:</label><br>
+                    <input type="email" name="email" placeholder="john@example.com" required><br><br>
+    
+                    <label>Current Website URL:</label><br>
+                    <input type="url" name="website" placeholder="https://www.yoursite.com"><br><br>
+                </div>
+                
+                <hr> <div class="form-section">
+                    <h3>2. What services are you looking for?</h3>
+                    <p>Select all that apply:</p>
+                    
+                    <input type="checkbox" name="services" value="web-dev"> Web Design & Development<br>
+                    <input type="checkbox" name="services" value="UI/UX"> UI (User Interface) /UX (User Experience) Design<br>
+                    <input type="checkbox" name="services" value="seo"> SEO (Search Engine Optimization)<br>
+                    <input type="checkbox" name="services" value="smm"> Social Media Management<br>
+                    <input type="checkbox" name="services" value="ppc"> PPC / Paid Ads<br>
+                    <input type="checkbox" name="services" value="branding"> Logo & Branding<br>
+                </div>
+    
+                <hr>
+    
+                <div class="form-section">
+                    <h3>3. What is your primary goal?</h3>
+                    <p>Select one:</p>
+    
+                    <input type="radio" name="goal" value="leads"> Generate more leads<br>
+                    <input type="radio" name="goal" value="sales"> Increase online sales<br>
+                    <input type="radio" name="goal" value="brand"> Build brand awareness<br>
+                    <input type="radio" name="goal" value="redesign"> Modernize old website<br>
+                </div>
+    
+                <hr>
+    
+                <div class="form-section">
+                    <h3>4. Budget & Timeline</h3>
+                    
+                    <label>Estimated Budget:</label><br>
+                    <select name="budget">
+                        <option value="">-- Select a Range --</option>
+                        <option value="micro">$500 - $1,000</option>
+                        <option value="small">$1,000 - $3,000</option>
+                        <option value="medium">$3,000 - $5,000</option>
+                        <option value="large">$5,000+</option>
+                    </select><br><br>
+                    
+                    <label>Desired Start Date:</label><br>
+                    <input type="date" name="start_date"><br><br>
+                </div>
+    
+                <hr>
+    
+                <div class="form-section">
+                    <h3>5. Project Details</h3>
+                    <label>Anything else we should know?</label><br>
+                    <textarea name="details" rows="5" cols="40" placeholder="Type here..."></textarea><br><br>
+                </div>
+    
+                <button type="submit">Submit Request</button>
+    
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

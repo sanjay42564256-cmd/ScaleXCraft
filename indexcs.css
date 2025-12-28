@@ -1,0 +1,505 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #fff;
+    color: #111827; /* Tailwind Gray-900 */
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+/* =========================================
+   2. NAVIGATION BAR
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically centers the logo block with buttons */
+    padding: 0.8rem 1.5rem; /* Compact padding */
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* New Wrapper for Logo + Tagline Group */
+.brand-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1; 
+}
+
+.logo {
+    font-size: 1.9rem; 
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: #2563EB; /* Brand Blue */
+    margin-bottom: 4px; /* Space between logo and tagline */
+}
+
+.tagline {
+    font-size: 0.65rem; /* Small subtitle text */
+    color: #6b7280;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Nav Links */
+.nav-links {
+    display: none; /* Hidden on mobile */
+    list-style: none;
+    gap: 2rem;
+    font-weight: 500;
+    margin-left: auto; /* Pushes links to the center/right */
+    margin-right: 2rem;
+}
+
+.nav-links a:hover {
+    color: #2563EB;
+}
+
+/* Right Side Actions */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block; /* Visible on mobile */
+}
+
+/* Fix for duplicate button in your HTML */
+.menu-toggl { 
+    display: none; 
+}
+
+/* =========================================
+   3. HERO SECTION (Main)
+   ========================================= */
+.main {
+    padding: 4rem 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+}
+
+.main-content span {
+    color: #2563EB;
+}
+
+.main-content p {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Buttons */
+.btn-black {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.btn-black:hover { background-color: #1f2937; }
+
+.btn-blue {
+    background-color: #2563EB;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+.btn-blue:hover { background-color: #1d4ed8; }
+
+.btn-outline {
+    border: 1px solid #d1d5db;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    transition: background-color 0.2s;
+}
+.btn-outline:hover { background-color: #f9fafb; }
+
+/* Main Image Placeholder */
+.main-image-container {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.placeholder-box {
+    width: 100%;
+    height: 16rem;
+    background-color: #f3f4f6;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #d1d5db;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+/* =========================================
+   4. BRANDS SECTION
+   ========================================= */
+.brands-section {
+    background-color: #f9fafb;
+    padding: 2.5rem 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.brands-section .container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.brands-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+.brands-grid span {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* =========================================
+   5. SERVICES SECTION
+   ========================================= */
+.services-section {
+    padding: 5rem 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: #6b7280;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.service-card {
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+    width: 3rem;
+    height: 3rem;
+    background-color: #dbeafe;
+    color: #2563EB;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s;
+}
+
+.service-card:hover .icon-box {
+    background-color: #2563EB;
+    color: white;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    color: #4b5563;
+}
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+footer {
+    background-color: black;
+    color: white;
+    padding: 3rem 1.5rem;
+}
+
+.footer-top {
+    max-width: 80rem;
+    margin: 0 auto;
+    border-bottom: 1px solid #1f2937;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand {
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-brand p {
+    color: #9ca3af;
+    max-width: 20rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.footer-links h4 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color:#2563EB ;
+}
+
+.footer-links ul {
+    list-style: none;
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    max-width: 80rem;
+    margin: 2rem auto 0;
+    font-size: 0.875rem;
+    color: #6b7280;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+/* =========================================
+   7. RESPONSIVE DESIGN (Desktop)
+   ========================================= */
+@media (min-width: 768px) {
+    /* Navbar */
+    .navbar {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .nav-links {
+        display: flex; /* Show links */
+    }
+    .menu-toggle {
+        display: none; /* Hide hamburger */
+    }
+
+    /* Hero */
+    .main {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        flex-direction: row;
+        text-align: left;
+    }
+    .main-content {
+        width: 50%;
+    }
+    .main-content h1 {
+        font-size: 3.75rem;
+    }
+    .main-buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .main-content p {
+        margin-left: 0;
+    }
+    
+    .main-image-container {
+        width: 50%;
+        margin-top: 0;
+        padding-left: 3rem;
+    }
+    .placeholder-box {
+        height: 24rem;
+    }
+
+    /* Brands */
+    .brands-grid {
+        gap: 4rem;
+    }
+
+    /* Services */
+    .section-header h2 {
+        font-size: 2.25rem;
+    }
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    /* Footer */
+    .footer-top {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer-brand {
+        margin-bottom: 0;
+    }
+    .footer-links {
+        gap: 4rem;
+    }
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+/* Mobile Tweak: Hide tagline on very small phones if needed */
+@media (max-width: 400px) {
+    .tagline {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+/* video css */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4); /* overlay */
+}
+
+.content h1 {
+  font-size: 3rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,161 @@
+/* Import Google Font for a modern look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* --- General Reset & Body --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9; /* Light grey-blue background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.logo {
+    text-align: center;
+    font-size: 2.5rem; /* Large and bold */
+    font-weight: 700;
+    color: #0056b3; /* Matches the brand accent color */
+    text-shadow: 10px 10px 20px rgba(0,0,0,0.1); /* Subtle depth */
+}
+
+/* --- Section & Container --- */
+section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-top: 5px solid #0056b3; /* Brand color accent on top */
+}
+
+/* --- Headings --- */
+h2 {
+    color: #0a2540; /* Deep Navy for main title */
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+h3 {
+    color: #0056b3; /* Brand Blue */
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eef2f7;
+}
+
+/* --- Form Elements --- */
+.form-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+/* Styling text inputs, selects, and textareas */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+/* Focus state for inputs (Glow effect) */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0056b3;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.1);
+}
+
+/* --- Checkboxes and Radios --- */
+/* Custom spacing for the list-style inputs */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+    margin-bottom: 12px;
+    transform: scale(1.1); /* Make them slightly larger */
+    cursor: pointer;
+}
+
+/* --- Horizontal Rule --- */
+hr {
+    border: 0;
+    height: 1px;
+    background: #e1e4e8;
+    margin: 30px 0;
+}
+
+/* --- Submit Button --- */
+button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #004494 0%, #003377 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }}
+
