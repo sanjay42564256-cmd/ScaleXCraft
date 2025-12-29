@@ -186,45 +186,49 @@ a {
 }
 
 /* =========================================
-   4. BRANDS SECTION
+   4. BRANDS SECTION (Grey Look + Sizing Fix)
    ========================================= */
-.brands-section {
-    background-color: #f9fafb;
-    padding: 2.5rem 0;
-    border-top: 1px solid #e5e7eb;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.brands-section .container {
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    text-align: center;
-}
-
-.brands-title {
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: #9ca3af;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 1.5rem;
-}
 
 .brands-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    opacity: 0.5;
-    filter: grayscale(100%);
+    align-items: center; 
+    gap: 3rem;
 }
 
+/* Style the wrapper (span) to align text and image */
 .brands-grid span {
-    font-size: 1.25rem;
+    display: flex;       
+    align-items: center; 
+    gap: 10px;           
+    font-size: 1.1rem;
     font-weight: 700;
+    color: #9ca3af; /* Grey text color to match logos */
 }
 
+/* TARGET THE IMAGES FOR THE GREY LOOK */
+.brands-grid img {
+    /* 1. Sizing Rules */
+    height: 50px;        
+    width: auto;         
+    object-fit: contain; 
+
+    /* 2. The Grey-Out Look */
+    filter: grayscale(100%); /* Makes the image Black & White */
+    opacity: 0.5;            /* Makes it 50% transparent (faded) */
+    
+    /* 3. Smooth Animation */
+    transition: all 0.3s ease; 
+    cursor: pointer;
+}
+
+/* HOVER EFFECT: When mouse is over the LOGO, bring back color */
+.brands-grid img:hover {
+    filter: grayscale(0%);   /* Bring back original color */
+    opacity: 1;              /* Fully visible (no fade) */
+    transform: scale(1.1);   /* Slight zoom for effect */
+}
 /* =========================================
    5. SERVICES SECTION
    ========================================= */
@@ -484,7 +488,7 @@ footer {
   object-fit: cover;
   z-index: -1;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap');
 .content {
   height: 100vh;
   display: flex;
@@ -495,11 +499,24 @@ footer {
   text-align: center;
   background: rgba(0, 0, 0, 0.4); /* overlay */
 }
-
-.content h1 {
-  font-size: 3rem;
-}
-
 .content p {
-  font-size: 1.2rem;
+    font-family:'Cinzel', serif;
+  font-size: 1.7rem;
 }
+
+/* Put this at the very top of indexcs.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+.content .vid-ti{
+    font-family:'Chewy', cursive;
+    font-size:9rem ;
+    font-weight: 1000;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+    color: #eef3ff;
+} 
+
+
+
+/* plane animation css */
